@@ -13,17 +13,18 @@
 #include <string>
 using namespace std;
 
-/*两数之和*/
+
 vector<int>twoSum(vector<int>inputNums ,int target);
 
-/*1108. IP 地址无效化*/
 string defangIPaddr(string address);
 
-/*344. 反转字符串*/
 void reverseString(vector<char>& s);
 
-/* 剑指 Offer 58 - I. 翻转单词顺序 */
 string reverseWords(string s);
+
+bool isPalindrome(string s);
+
+bool isPalindrome(int x);
 
 
 

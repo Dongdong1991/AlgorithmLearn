@@ -15,6 +15,10 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     
+    bool value = isPalindrome(1000000001);
+    
+    printf("%d\n",value);
+    
     return 0;
 }
 
