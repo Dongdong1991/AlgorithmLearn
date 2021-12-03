@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include "learn01.hpp"
+#include "Log.hpp"
 
 using namespace std;
 
@@ -15,9 +16,11 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     
-    bool value = isPalindrome(1000000001);
+    vector<int>temp = {1,1,1,2,2,3,3,3,3,3,4,5,6,7,7,7,7,7,9};
+    int s = removeDuplicates(temp);
+        
+    kIntPrintf(s);
     
-    printf("%d\n",value);
     
     return 0;
 }

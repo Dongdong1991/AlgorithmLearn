@@ -39,7 +39,7 @@ string defangIPaddr(string address){
 
 
 void reverseString(vector<char>& s){
-
+    
     size_t count = s.size();
     for (size_t i = 0; i!=count/2; i++) {
         char temp = s[i];
@@ -50,7 +50,7 @@ void reverseString(vector<char>& s){
 
 string reverseWords(string s){
     string newStr;
-
+    
     
     
     
@@ -94,4 +94,61 @@ bool isPalindrome(int x) {
     return tempValue == y ? true : false;
 }
 
+int lengthOfLastWord(string s){
+    
+    int lend = 0;
+    int count = (int)s.length();
+    for (int i = count; i>=0; i--) {
+        char c = s[i];
+        if (lend>0) {
+            if (c == ' ') {
+                break;
+            }
+            lend ++;
+        }else{
+            if (c != ' ' && c != '\0') {
+                lend ++;
+            }
+        }
+    }
+    return lend;
+}
 
+string replaceSpace(string s) {
+    string str = "";
+    for (auto c:s){
+        if (c == ' ') {
+            str += "%20";
+        }else{
+            str += c;
+        }
+    }
+    return str;
+}
+
+
+string reverseLeftWords(string s, int n) {
+    
+    string str = s.substr(0,n);
+    s.insert(s.size(), str);
+    str = s.substr(n,s.size()-n);
+    return str;
+}
+
+int removeDuplicates(vector<int>& nums) {
+    int len = (int)nums.size();
+    if (len==0) {
+        return 0;
+    }
+    //定义快慢指针。
+    int fast = 1; int low = 1;
+    while (fast<len) {
+        //如果不想等则填充。
+        if (nums[fast] != nums[fast-1]) {
+            nums[low] = nums[fast];
+            low ++ ;
+        }
+        fast ++;
+    }
+    return low;
+}

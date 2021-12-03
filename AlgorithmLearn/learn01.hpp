@@ -26,6 +26,13 @@ bool isPalindrome(string s);
 
 bool isPalindrome(int x);
 
+int lengthOfLastWord(string s);
+
+string replaceSpace(string s);
+
+string reverseLeftWords(string s, int n);
+
+int removeDuplicates(vector<int>& nums);
 
 
 #endif /* learn01_hpp */
