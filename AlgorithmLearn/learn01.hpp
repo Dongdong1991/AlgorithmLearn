@@ -34,5 +34,10 @@ string reverseLeftWords(string s, int n);
 
 int removeDuplicates(vector<int>& nums);
 
+int strToInt(string str);
+
+void setZeroes(vector<vector<int>>& matrix);
+
+
 
 #endif /* learn01_hpp */

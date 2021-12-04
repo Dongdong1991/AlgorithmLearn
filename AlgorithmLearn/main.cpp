@@ -16,11 +16,10 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     
-    vector<int>temp = {1,1,1,2,2,3,3,3,3,3,4,5,6,7,7,7,7,7,9};
-    int s = removeDuplicates(temp);
-        
-    kIntPrintf(s);
     
+    
+    vector<vector<int>> matrix{{1,1,1},{0,1,0},{1,0,0}};
+    setZeroes(matrix);
     
     return 0;
 }
