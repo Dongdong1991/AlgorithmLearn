@@ -18,8 +18,10 @@ int main(int argc, const char * argv[]) {
     
     
     
-    vector<vector<int>> matrix{{1,1,1},{0,1,0},{1,0,0}};
-    setZeroes(matrix);
+    vector<int> matrix = divingBoard(2,1118596,979);
+    
+    kVectorIntPrintf(matrix);
+//    isStraight(matrix);
     
     return 0;
 }

@@ -38,6 +38,12 @@ int strToInt(string str);
 
 void setZeroes(vector<vector<int>>& matrix);
 
+bool isStraight(vector<int>& nums);
+
+vector<int> divingBoard(int shorter, int longer, int k);
+
+
+
 
 
 #endif /* learn01_hpp */

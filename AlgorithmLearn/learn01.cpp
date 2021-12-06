@@ -165,8 +165,8 @@ int strToInt(string str){
 
 void setZeroes(vector<vector<int>>& matrix) {
     
-    int m = matrix.size();
-    int n = matrix[0].size();
+    int m = (int)matrix.size();
+    int n = (int)matrix[0].size();
     vector<int> row(m), col(n);
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -182,4 +182,88 @@ void setZeroes(vector<vector<int>>& matrix) {
             }
         }
     }
+}
+
+bool isStraight(vector<int>& nums) {
+    
+    
+    if (nums.size()<5) {
+        return false;
+    }
+    
+    //x先排序
+    sort(nums.begin(), nums.end());
+    //找出0的个数
+    int totalZero = 0;
+    //记录是否有相同的数字
+    bool isTheSame = false;
+    for (int i=0; i!=nums.size(); i++) {
+        if (nums[i] == 0) {
+            totalZero ++;
+        }
+        if (i+1<nums.size()) {
+            //相同数字且不等于0
+            if (nums[i] == nums[i+1] && nums[i] != 0) {
+                isTheSame = true;
+                break;
+            }
+        }
+    }
+    
+    if (isTheSame) {
+        return !isTheSame;
+    }
+    
+    
+    int  minV = nums[0];
+    int maxV = nums[nums.size()-1];
+    
+    
+    //不包含0
+    if (totalZero==0) {
+        //最大值 减最小值 大于5 肯定不是顺子 a0 a1 a2 a3 a4 a5
+        if (maxV - minV>=5) {
+            return false;
+        }else{
+            return true;
+        }
+    }else{
+        //包含0
+        if (totalZero == 1) {
+            //1个0 排除0为最小，选下标为1个为最小的
+            minV = nums[1];
+            
+        }else if(totalZero == 2){
+            //2个0 排除0为最小，选下标为2为最小的
+            minV = nums[2];
+            
+        }else{
+            //3个0 排除0为最小，选下标为3为最小的
+            minV = nums[3];
+        }
+        if (maxV-minV>5) {
+            return false;
+        }else{
+            return true;
+        }
+    }
+    
+}
+
+vector<int> divingBoard(int shorter, int longer, int k){
+    
+    if (k == 0) {
+        return vector<int>{};
+    }
+    
+    if (shorter == longer) {
+        return {shorter*k};
+    }
+    
+    int totalCount = k + 1;
+    vector <int> all(totalCount);
+    for (int i=0; i!=totalCount; i++) {
+        all[i] = longer * i + shorter * (k-i);
+    }
+    return all;
 }

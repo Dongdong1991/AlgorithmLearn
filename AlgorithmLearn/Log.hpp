@@ -22,4 +22,6 @@ void kIntPrintf(int value);
 
 void kFloatPrintf(float value);
 
+void kVectorIntPrintf(vector<int> nums);
+
 #endif /* Log_hpp */

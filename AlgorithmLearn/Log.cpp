@@ -6,20 +6,34 @@
 //
 
 #include "Log.hpp"
+#include "iostream"
+
 
 
 void kStringPrintf(string s){
-    printf("%s\n",s.c_str());
+    printf(" string = %s\n",s.c_str());
 }
 
 void kCharPrintf(char s){
-    printf("%c\n",s);
+    printf(" char = %c\n",s);
 }
 
 void kIntPrintf(int value){
-    printf("%d\n",value);
+    printf("int = %d\n",value);
 }
 
 void kFloatPrintf(float value){
-    printf("%f\n",value);
+    printf("float = %f\n",value);
+}
+
+void kVectorIntPrintf(vector<int> nums){
+    string str = "vector = {";
+    for (int i=0; i!=nums.size(); i++) {
+        str+= to_string(nums[i]);
+        if (i!=nums.size()-1) {
+            str+=", ";
+        }
+    }
+    str+="} ";
+    printf("%s\n",str.c_str());
 }
