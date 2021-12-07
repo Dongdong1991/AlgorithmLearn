@@ -26,5 +26,7 @@ ListNode* removeElementsUseVirtualHeader(ListNode* head, int val);
 
 ListNode* removeElements(ListNode* head, int val);
 
+ListNode* middleNode(ListNode* head);
+
 
 #endif /* Learn02_hpp */
