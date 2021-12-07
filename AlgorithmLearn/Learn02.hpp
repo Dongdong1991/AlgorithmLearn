@@ -11,5 +11,20 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+using namespace std;
+
+
+struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(nullptr) {}
+      ListNode(int x) : val(x), next(nullptr) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+ };
+
+ListNode* removeElementsUseVirtualHeader(ListNode* head, int val);
+
+ListNode* removeElements(ListNode* head, int val);
+
 
 #endif /* Learn02_hpp */
