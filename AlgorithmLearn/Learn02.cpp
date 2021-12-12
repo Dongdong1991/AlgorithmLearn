@@ -93,6 +93,34 @@ ListNode* middleNode(ListNode* head) {
 ListNode* middleNodeFastLow(ListNode* head){
     
     //基于快慢指针实现
-    return head;
+    ListNode *fastNode = new ListNode();
+    ListNode *lowNode = new ListNode();
+
+    fastNode = head;
+    lowNode = head;
+
+    while (fastNode != NULL && fastNode->next != NULL) {
+        
+        fastNode = fastNode->next->next;
+        lowNode = lowNode->next;
+    }
+    
+    return lowNode;
 }
 
+
+ListNode* deleteDuplicates(ListNode* head) {
+    
+    if (head==NULL) {
+        return head;
+    }
+    ListNode *cur = head;
+    while (cur->next) {
+        if (cur->val == cur->next->val) {
+            cur->next = cur->next->next;
+        }else{
+            cur = cur->next;
+        }
+    }
+    return head;
+}

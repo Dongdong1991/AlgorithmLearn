@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include "Learn02.hpp"
 
 using namespace std;
 
@@ -23,5 +24,7 @@ void kIntPrintf(int value);
 void kFloatPrintf(float value);
 
 void kVectorIntPrintf(vector<int> nums);
+
+void kNodePrintf(ListNode *head);
 
 #endif /* Log_hpp */

@@ -28,5 +28,8 @@ ListNode* removeElements(ListNode* head, int val);
 
 ListNode* middleNode(ListNode* head);
 
+ListNode* deleteDuplicates(ListNode* head);
+
+
 
 #endif /* Learn02_hpp */

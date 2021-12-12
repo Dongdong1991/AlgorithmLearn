@@ -37,3 +37,16 @@ void kVectorIntPrintf(vector<int> nums){
     str+="} ";
     printf("%s\n",str.c_str());
 }
+
+void kNodePrintf(ListNode *head){
+    printf("\n");
+    string str = "";
+    while(head){
+        str += std::to_string(head->val);
+        str += "->";
+        printf("%d\n",head->val);
+        head = head->next;
+    }
+    str += "NULL";
+    printf("%s\n",str.c_str());
+}
