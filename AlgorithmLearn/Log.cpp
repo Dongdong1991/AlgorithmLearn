@@ -50,3 +50,17 @@ void kNodePrintf(ListNode *head){
     str += "NULL";
     printf("%s\n",str.c_str());
 }
+
+void kIntArrayPrintf(int array[],int len){
+    
+    printf("\n");
+    string str = "[";
+    for (int i=0; i!=len; i++) {
+        str += std::to_string(array[i]);
+        if(i<len-1){
+            str += "、";
+        }
+    }
+    str += "]";
+    printf("%s\n",str.c_str());
+}

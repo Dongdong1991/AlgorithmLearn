@@ -27,4 +27,7 @@ void kVectorIntPrintf(vector<int> nums);
 
 void kNodePrintf(ListNode *head);
 
+void kIntArrayPrintf(int array[],int len);
+
+
 #endif /* Log_hpp */
