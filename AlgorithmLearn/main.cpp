@@ -18,13 +18,13 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
 
-    int nums[]{11,4,9,3,12,1,9989,22,314,35423,6564};
+    int nums[]{11,4,9,3,12,1};
     kStringPrintf("未排序前数据");
-    kIntArrayPrintf(nums, 11);
+    kIntArrayPrintf(nums, 6);
     kStringPrintf("开始选择排序------>");
-    selectionSort(nums, 11);
+    insertionSort(nums, 6);
     kStringPrintf("完成选择排序------>");
-    kIntArrayPrintf(nums, 11);
+    kIntArrayPrintf(nums, 6);
 
     return 0;
 }

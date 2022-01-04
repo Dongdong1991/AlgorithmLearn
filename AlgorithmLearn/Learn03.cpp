@@ -31,7 +31,7 @@ void bubbleSort(int a[],int n){
 
 //插入排序
 //【已排序区间】+【未排序区间】 = 总数组区间长度
-//拿第一个数据来做比较。有找到小于的，交换数据，然后跳去循环，以此循环。
+//拿第一个数据来做比较。有找到小于的，交换数据，然后跳去循环，以此循环。然后插入数据
 //确保已排序区间都是有序的。
 void insertionSort(int a[],int n){
     
@@ -46,8 +46,8 @@ void insertionSort(int a[],int n){
             }else{
                 break;
             }
-            a[j] = value;//找到插入的位置
         }
+        a[j+1] = value;//找到插入的位置
         kIntArrayPrintf(a, n);
     }
 }
